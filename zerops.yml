@@ -16,7 +16,6 @@ zerops:
         DATABASE_URL: ${db_connectionString}
         PORT: 8081
         SHOPIFY_APP_URL: ${zeropsSubdomain}
-        SHOPIFY_API_KEY: 1ffae629a73df57315494e38008dd0cd
         SCOPES: write_products
         NODE_ENV: production
       ports:
@@ -24,4 +23,4 @@ zerops:
           httpSupport: true
       initCommands:
         - zsc execOnce $appVersionId -- npm run prisma migrate deploy
-      start: pnpm run start
+      start: npm run start
